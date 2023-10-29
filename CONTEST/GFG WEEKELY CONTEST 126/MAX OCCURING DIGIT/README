@@ -1,0 +1,3 @@
+Given an array of n positive integers and a digit k, 
+find the number with the maximum occurrence of k. In case there is more than one such number,
+return the smallest number. If digit k does not occur in any number, return -1.
