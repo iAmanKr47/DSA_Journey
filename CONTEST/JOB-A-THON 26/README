@@ -1,0 +1,15 @@
+An array A[] of integers is given.
+
+Lets define the power of the integer at index i. 
+Let a be the minimum integer of all the integers having their indices less than i, and b be the minimum integer of all the integers having their indices greater than i 
+The power of the integer at index i is defined as max (A[i]-a, A[i] - b).
+
+The score of the A is defined as the maximum power of the powers of all the integers in the array. You need to print the Score of the A.
+
+                                         Note
+
+* 0-based indexing is followed.
+
+* The integers can be positive, negative or 0.
+
+* Take the powers of the integers at first and last index of the array to be -10^9.
