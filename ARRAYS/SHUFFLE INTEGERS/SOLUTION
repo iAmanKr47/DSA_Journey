@@ -6,3 +6,14 @@ APPROACH:
          arr[i] = (arr[pos] % mx)* mx + (arr[i] % mx);
          pos is the position of a number which you want to place at the ith position.
          mx can be any number that is greater than all the elements of the array.
+
+
+
+APPROACH 2 ALGO :
+The entire code is just 3 for-loops:
+1. Move b1 to bn/2 into their right positions
+2. Move a3 to an/2 into their right positions
+3. Get the correct element from the stored pair in each position
+
+
+#BOTH ARE SIMILAR APPROACH
