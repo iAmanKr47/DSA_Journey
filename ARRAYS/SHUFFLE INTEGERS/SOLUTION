@@ -1,0 +1,8 @@
+APPROACH:
+         We can make use of a technique of storing 2 numbers inside one number.
+         By doing this, when we modulo a number by mx, we get an original number. 
+         When we divide by num, we get the desired number.
+         Formula for storing two number inside one : 
+         arr[i] = (arr[pos] % mx)* mx + (arr[i] % mx);
+         pos is the position of a number which you want to place at the ith position.
+         mx can be any number that is greater than all the elements of the array.
