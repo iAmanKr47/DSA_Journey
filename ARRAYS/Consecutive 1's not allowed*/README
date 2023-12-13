@@ -1,0 +1,17 @@
+Counting Binary Strings with No Consecutive 1's
+
+Introduction: 
+Binary strings are sequences of 0s and 1s, and an interesting problem arises when we seek to count all possible distinct binary strings of a given length 
+such that there are no consecutive 1s. This problem has applications in various domains, 
+including computer science and cryptography. In this article, 
+we'll explore an optimized approach to solve this problem using the Fibonacci sequence andmodular arithmetic.
+
+Intuition:
+To count the number of binary strings with no consecutive 1s, we can leverage the Fibonacci sequence. 
+The idea is to consider each bit in the string individually and calculate the number of possibilities for that bit. 
+By doing so for every bit and combining the results, we can obtain the total count of valid binary strings.
+
+Approach:
+The optimized approach involves calculating the Fibonacci sequence up to the given length N. 
+The Fibonacci numbers are used because they represent the number of ways to reach the current state from the previous two states,
+which aligns with our problem of counting binary strings with no consecutive 1s.
