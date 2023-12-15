@@ -1,7 +1,7 @@
 class Solution{
 	public:
 		 int mod = 1e9 + 7;
-		 //fibonacci series and frodg jump question of recurrsion
+		 //fibonacci series and frog jump question of recurrsion
 		int nthPoint(int n){
 		    if(n == 0 || n == 1)
 		        return 1;
