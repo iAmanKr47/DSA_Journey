@@ -1,0 +1,28 @@
+                                                    RECURRSIVE CALL TREE
+
+
+The recursive tree depicts the calls made by the findMaxSum function for each element in the array and the decisions made to include or exclude each element. 
+We will denote each node in the tree with the parameters (index, currentSum).
+
+                    (0, 0)
+                   /      \
+          (2, 3)            (1, 0)
+           /   \           /      \
+     (4, 10) (3, 3)   (3, 2)         (2, 0)
+
+
+
+
+
+                                               Here is how to interpret the tree:
+
+The root of the tree is the initial call (0, 0) where index is the starting index (0) and currentSum is initially 0.
+At each node, there are two branches representing the decision to include or exclude the current element.
+The tree explores all possible combinations of including and excluding elements to find the maximum sum of a non-adjacent subsequence.
+The numbers in parentheses represent the (index, currentSum) parameters for each function call.
+For example:
+
+At the root (0, 0), the left child (2, 3) represents the decision to include the element at index 0 (3), skipping the next element (2), and continuing from index 2.
+The right child (1, 0) represents the decision to exclude the element at index 0 (3) and continue from index 1.
+This tree continues to branch and explore all possible combinations until reaching the leaves, where the base case is met. 
+The final result is the maximum sum of a non-adjacent subsequence.
