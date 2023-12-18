@@ -1,0 +1,15 @@
+                                                               PROBLEM STATEMENT
+
+                      Given an array A of size N. The value of an array is denoted by the bit-wise XOR of all elements it contains. 
+                                        Find the bit-wise XOR of the values of all subarrays of A.
+
+                                                                   APPROACH 1
+
+                                                      Calculate the count of subarrays:
+
+  int count = (n - i) * (i + 1): 
+                               This calculates the count of subarrays in which the current element at index i participates. 
+                               The count is calc as the product of the remaining elements on the right (n-i) and the no. of elements on the left (i + 1).
+
+                                                                   APPROACH 2
+                        Just starting from 0th index take XOR of each alternate elemnts of the array.
