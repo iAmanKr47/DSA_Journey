@@ -1,0 +1,11 @@
+His 2024 resolution: Solve POTD every day.
+
+Eager to earn coins for GFG Merchandise,
+Geek faces new rules:
+
+Earning Coin: 
+
+Geek can accumulate coins[i] by solving the POTD on the ith day, where 1 <= coins[i] <= 2024 and the sum of coins <= 2024.
+Merchandise Eligibility: To purchase merchandise, the coins earned must be divisible by 20 or 24, or precisely equal to 2024.
+Geeks resolutions often fades over time. Realistically, he can only commit to active participation for N (where N ≤ 366) days.
+Given the value of N and number of coins associated with each POTD, can Geek strategically solve some (or all) POTDs to become eligible for redeeming merchandise?
