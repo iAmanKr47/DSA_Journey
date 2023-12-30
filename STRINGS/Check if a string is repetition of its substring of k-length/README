@@ -1,0 +1,9 @@
+Given a string s, check if it is possible to convert it into a string that is the repetition of a substring of length k. 
+Conversion has to be done by following the steps mentioned below only once:
+
+-> Select two indices i and j (zero-based indexing, i could be equal to j), such that i and j are divisible by k.
+-> Select substrings of length k starting from indices i and j.
+-> Replace substring starting at index i with substring starting at index j within the string
+Note: You have to convert the string using the operation only once.
+
+VIDEO SOLUTION LINK: https://www.youtube.com/watch?v=MdRdgnTwrck
