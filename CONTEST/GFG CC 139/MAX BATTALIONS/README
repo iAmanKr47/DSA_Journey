@@ -1,0 +1,11 @@
+                                                 PROBLEM STATEMENT
+Geek has the names of N soldiers represented as "names." He wants to divide them into battalions **without changing the order of the names. 
+The general will validate the division only if every soldier who has the same name belongs to the same battalion. 
+Return the maximum number of battalions Geek could make.
+
+Example 1:
+N = 4
+names = {"abc", "def", "abc", "aieh"}
+Output: 2
+Explanation:
+Geek will choose the first, second and third soldiers for the first battalion, and the fourth solider for the second battalion.
