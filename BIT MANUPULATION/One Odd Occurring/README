@@ -1,0 +1,11 @@
+Problem statement
+
+Given an array ‘ARR’ of ‘N’ integers, where all the elements occur an even number of times and only one number occurs an odd number of times.
+Find and return the number which occurs an odd number of times.
+
+SOLUTION 
+The bitwise Xor all elements of the array where even occurring elements on Xor will give 0 
+whereas odd occurring element on xor give us the number since its even occurrence will give 0.
+
+XOR(n appearing odd number of times) = n
+XOR(n appearing even number of times) = 0
