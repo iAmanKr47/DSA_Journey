@@ -1,0 +1,28 @@
+PROBLEM STATEMENT:
+              Given a sorted circular linked list of length n, the task is to insert a new node in this circular list so that it remains a sorted circular linked list.
+
+                                                               KEEP IN MIND:
+
+input : 
+n = 6
+-15 -9 -6 5 7 14 
+
+-19
+Your Output:   Output Limit Exceeded
+
+Its Correct output is:
+-19 -15 -9 -6 5 7 14
+
+it is because it is circular linked list and most of you are connecting head directly in this case :-
+if(data < head->data){
+ 
+Node * temp = new Node(data);
+temp->next = head;
+return temp;
+}
+ 
+but understand if head is -15 and 14is tail then 14 will again connect to -15 in ( temp -> next = head ) as well. So,
+1. create new Node (for ex. temp)
+2. create new Node (for ex. curr) for traversal till end node and then connect the end node's next to temp and temp's next to head 
+
+                    
