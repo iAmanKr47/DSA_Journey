@@ -1,0 +1,31 @@
+PROBLEM STATEMENT :
+
+Geek has 2D Grid which contains N coins. Geek also knows the position of all the coins as he has 2D array Coins where X¡,Y¡ denote the position of the i ith Coin.
+Geek can move in only one direction i.e Right, Left, Up, Down or Diagonal.
+You need to find out the maximum number of coins Geek can collect if he can start moving from any point of the grid.
+
+NOTE:
+• Diagonal movement refers to movement from (i, j) to (i+1, j+1), (i+1, j- 1), (i-1, j+1), (i-1, j-1).
+• The direction cannot be changed once Geek has started moving in a particular direction i.e if Geek is going right from (i, j) then he can only go right only.
+
+                                                                    APPRAOCH
+
+CASE:1 FOR SAME SAME ROW 
+                         STORE ROW NO. OF EACH COIN and store occurance of a row no. who has max occurance 
+CASE:2 FOR SAME SAME COL
+                         STORE COL NO. OF each coin and store max occurance of a col no. who has max occurance 
+
+CASE:3 FOR SAME MAIN DIAGONAL ELEMENT (ALL THOSE DIAGONAL WHICH STARTS FROM LEFT MOST TO RIGHT MOST)
+                        PROPEERTY : FOR ELEMENT  IN SAME DAGONAL WE SHOULD HAVE SAME DIFFRENCE (ROW-COL) OF TWO ELEMENTS
+
+                        STORE (ROW-COL) OF each coin and store max occurance of THAT who has max occurance OF (ROW-COL). 
+
+CASE:4 FOR SAME SECONDARY  DIAGONAL ELEMENT (ALL THOSE DIAGONAL WHICH STARTS FROM RIGHT MOST TO LEFT MOST)
+                         PROPEERTY : FOR ELEMENT  IN SAME SEC. DAGONAL WE SHOULD HAVE SAME VALUE OF SUM (ROW+COL) OF TWO ELEMENTS.
+
+                         STORE (ROW-COL) OF each coin and store max occurance of THAT who has max occurance OF (ROW-COL).
+
+FINAL ANS WOULD BE MAX OF ALL THE 4 CASES.
+
+                       
+                         
