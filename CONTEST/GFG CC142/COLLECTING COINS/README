@@ -1,3 +1,6 @@
+TOPIC : 2D MATRIX 
+LOGIC USED: PROPERTIES OF DIAGONALS,ROW,COLUMN 
+
 PROBLEM STATEMENT :
 
 Geek has 2D Grid which contains N coins. Geek also knows the position of all the coins as he has 2D array Coins where X¡,Y¡ denote the position of the i ith Coin.
@@ -16,12 +19,12 @@ CASE:2 FOR SAME SAME COL
                          STORE COL NO. OF each coin and store max occurance of a col no. who has max occurance 
 
 CASE:3 FOR SAME MAIN DIAGONAL ELEMENT (ALL THOSE DIAGONAL WHICH STARTS FROM LEFT MOST TO RIGHT MOST)
-                        PROPEERTY : FOR ELEMENT  IN SAME DAGONAL WE SHOULD HAVE SAME DIFFRENCE (ROW-COL) OF TWO ELEMENTS
+                        PROPEERTY :  ELEMENTS IN SAME MAIN DIAGONAL WOULD HAVE SAME (ROW-COL) VALUE
 
                         STORE (ROW-COL) OF each coin and store max occurance of THAT who has max occurance OF (ROW-COL). 
 
 CASE:4 FOR SAME SECONDARY  DIAGONAL ELEMENT (ALL THOSE DIAGONAL WHICH STARTS FROM RIGHT MOST TO LEFT MOST)
-                         PROPEERTY : FOR ELEMENT  IN SAME SEC. DAGONAL WE SHOULD HAVE SAME VALUE OF SUM (ROW+COL) OF TWO ELEMENTS.
+                         PROPEERTY : ELEMENTS IN SAME SECONADARY DIAGONAL WOULD HAVE SAME (ROW+COL) VALUE.
 
                          STORE (ROW-COL) OF each coin and store max occurance of THAT who has max occurance OF (ROW-COL).
 
