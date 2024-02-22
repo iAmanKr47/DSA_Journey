@@ -16,3 +16,25 @@ Output:
 6
 Explanation: 
 There are 6 sub-sequences:[ge], [ge], [g e], [g e] [g e] and [g e].
+
+
+Intuition:
+
+if at any point of the computation If we are able to get the same character of first character of source and the target are same
+From above step our actual computation start If at any point we find similar character in both source and target string , then we can check with below two steps:
+Either we include the character index in the of the source and we check with other characters of the source such that do we have any other character similar to the existing character index, because our purpose is to get the count of the subsequence we can get in source of the target.
+Approach:
+
+1. Will maintain the dp array of the length of source and target string length
+
+2. dp[i][j] represents how many subsequences of the size of j length of target string found in source string of size i length
+
+3. If at any point of the recursion, we can traverse the target length then we found one of the subsequences of the target and hence will return 1
+
+4If we reach at the end of the source hence we didn't find a subsequence of the target
+
+4.If at any point of the recursion we encounter the visited size of the target size then will return the value of the size with the corresponding source size
+
+5.if the character at the given index at the source and target are the same then we we have two options, either we check with it or we exclude it and check another because we need to count the number of targets in the subsequence of the source.
+
+6.if characters are not equal then will wait for the source string character to be same and again do computation
