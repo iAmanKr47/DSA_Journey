@@ -26,3 +26,39 @@ void solve(Node *root,int sum,int &maxSum,int len,int&maxLen){
         return maxSum;
     }
 };
+
+
+//code 2:
+
+class Solution
+{
+public:
+    int maxSum=0;
+    int maxLevel=0;
+    void solve(Node *root,int level,int sum){
+        if(root == NULL) return;
+        
+        //check at the leaf node
+        if(root->left==NULL && root->right==NULL){
+            sum+=root->data;
+            if(level>maxLevel) {
+                maxLevel=level;
+                maxSum=sum;
+            }
+            else if(level==maxLevel) maxSum=max(maxSum,sum);
+            
+            return ;
+        }
+      
+        solve(root->left,level+1,sum+root->data);
+        solve(root->right,level+1,sum+root->data);
+        
+    }
+    int sumOfLongRootToLeafPath(Node *root)
+    {   if(root->right==NULL && root->left==NULL ) return root->data; 
+        int level=0;
+        int sum=0;
+        solve(root,level,sum);
+        return maxSum;
+    }
+};
