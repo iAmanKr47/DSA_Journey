@@ -1,0 +1,25 @@
+//TOPIC: PREFIX SUM /COUNTING AND MATHS
+
+long long numberOfRightTriangles(vector<vector<int>>& grid) {
+        long long ans=0;
+        int n=grid.size();
+        int m=grid[0].size();
+        vector<int>row(n); //store count no. of 1's for each row
+        vector<int>col(m); //store count no. of 1's for each col
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i][j]){
+                    row[i]++; 
+                    col[j]++;
+                }
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i][j]){
+                    ans+=1ll*(row[i]-1)*(col[j]-1); //MAIN FORMULA TO CALCULATE
+                }
+            }
+        }
+        return ans;
+    }
