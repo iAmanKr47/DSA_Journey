@@ -1,0 +1,24 @@
+//BACTRACKING
+
+class Solution {
+public:
+vector<vector<int>> ans;
+     void solve(vector<int> &arr, int i,int targetSum,vector<int>&temp){
+       if(i>=arr.size()){
+        if(targetSum==0)
+        ans.push_back(temp);
+        return ;
+       }
+       if(targetSum<0)return;
+       temp.push_back(arr[i]);
+       solve(arr,i,targetSum-arr[i],temp);
+       temp.pop_back();
+       solve(arr,i+1,targetSum,temp);
+   }
+    vector<vector<int>> combinationSum(vector<int>& arr, int target) {
+        vector<int>temp;
+        solve(arr,0,target,temp);
+        return ans;
+
+    }
+};
