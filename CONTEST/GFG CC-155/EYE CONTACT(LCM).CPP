@@ -1,3 +1,23 @@
+PROBLEM LINK: https://practice.geeksforgeeks.org/contest/gfg-weekly-155-rated-contest/problems
+
+CODE 1: SIMPLY INCREASE SUM BY GREATER NUMBER ,AND CHECK AT ANY MOMENT IF SUM IS DIVISIBLE BY SMALLER NUMBER THEN SUM IS THE LCM OF TWO NUMBERS
+
+long long firstContact(int n, int m) {
+        long long greater=max(n,m);
+        long long  smallest=min(n,m);
+        long long ans;
+        long long i=greater;
+        while(1)
+        {
+            if(i%smallest==0)
+            {
+               ans=i;
+               break;
+            }
+            i+=greater;
+        }
+        return ans;
+    }
 
 
 CODE2: USING GCD
