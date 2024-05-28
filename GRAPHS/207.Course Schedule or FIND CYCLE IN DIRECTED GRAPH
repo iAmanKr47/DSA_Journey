@@ -1,0 +1,37 @@
+                                   //USE CONCEPT OF VISITED array + PATH array
+                                   
+
+class Solution {
+public:
+bool isCycle(int course,vector<vector<int>>&prereqAdj,vector<int>&vis,vector<int>&path){
+    
+    for(auto i:prereqAdj[course]){
+         if(vis[i]==1 &&path[i]==1)return true;
+         if(vis[i]==-1)
+         {
+           vis[i]=1;
+           path[i]=1;
+           if(isCycle(i,prereqAdj,vis,path))return true;
+           path[i]=-1;
+         }
+    }
+    return false;
+}
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        vector<vector<int>>prereqAdj(numCourses);
+        vector<int>vis(numCourses,-1);
+        vector<int>path(numCourses,-1);
+
+        //create adjancyList of prequesites of courses of a specific course
+        for(auto v:prerequisites) prereqAdj[v[1]].push_back(v[0]);
+
+        //detect cycle is present or not in directed graph 
+        //if cycle present then return false
+        for(int i=0;i<numCourses;i++){
+            if(vis[i]==-1){
+                if(isCycle(i,prereqAdj,vis,path))return false;
+            }
+        }
+        return true;
+    }
+};
