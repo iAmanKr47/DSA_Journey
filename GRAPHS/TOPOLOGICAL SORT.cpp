@@ -38,7 +38,8 @@ class Solution
 
 
 //code 2: USING KAHN'S ALGORITHM
-//{ Driver Code Starts
+//the whole idea of kahn's algo is to include any number in the order when it has no dependencies left. 
+
 #include <bits/stdc++.h>
 using namespace std;
 
