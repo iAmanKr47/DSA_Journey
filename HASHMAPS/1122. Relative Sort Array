@@ -1,0 +1,28 @@
+// HASH MAP + SORTING 
+// REFER EDITORIAL OF THIS QUES ON LC
+
+ vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
+        unordered_map<int,int>mp;
+        vector<int>ans;
+        vector<int>temp;
+        //store element of arr2 in map
+        for(auto i:arr2)mp[i]=0;
+        //now store the count of element in arr1 that are present in arr2 
+        for(auto i:arr1){
+            if(mp.find(i)!=mp.end()){
+                mp[i]++;
+            }
+            else{
+                temp.push_back(i);//elements which are not in arr2 are stored separately
+            }
+        }
+        //now store the element in answer array same as order in arr2
+        for(auto i:arr2){
+            int freq=mp[i];
+           while(freq--)ans.push_back(i);
+        }
+        sort(temp.begin(),temp.end());
+        ans.insert( ans.end(), temp.begin(), temp.end() );//concatenate both vectors for the answer
+        return ans;
+
+    }
