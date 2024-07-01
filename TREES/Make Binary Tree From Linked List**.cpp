@@ -34,3 +34,30 @@ void convert(Node *head, TreeNode *&root) {
         }
     }
 }
+
+
+//optimised approach
+
+void convert(Node *head, TreeNode *&root) {
+    Node *temp=head->next;
+    queue<TreeNode*>q;
+    root=new TreeNode(head->data);
+    q.push(root);
+    while(q.size()>0 && temp){
+        auto front=q.front();
+        q.pop();
+        //left node of the front Node
+        TreeNode *leftNode=new TreeNode(temp->data);
+        q.push(leftNode);
+        temp=temp->next;
+        front->left=leftNode;
+        
+        //right node of the front node
+        if(temp){//if temp is null then whole tree is constructed
+        TreeNode *rightNode=new TreeNode(temp->data);
+        q.push(rightNode);
+        temp=temp->next;
+        front->right=rightNode;
+        } 
+    }
+    
