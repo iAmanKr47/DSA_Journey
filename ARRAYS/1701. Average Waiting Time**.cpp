@@ -1,4 +1,4 @@
-
+//simulation
 double averageWaitingTime(vector<vector<int>>& customers) {
         int n=customers.size();
         int currTime=customers[0][0]+customers[0][1];
