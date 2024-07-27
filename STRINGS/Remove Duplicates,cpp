@@ -1,0 +1,15 @@
+//S.C O(1) efficient way to solve this solution 
+
+string removeDups(string str) {
+        vector<int>freq(26,0);
+        int j=0;
+        int n=str.size();
+        for(int i=0;i<n;i++){
+            if(freq[str[i]-'a']==0){
+                str[j++]=str[i];
+                freq[str[i]-'a']++;
+            }
+            
+        }
+        return str.substr(0,j);
+    }
