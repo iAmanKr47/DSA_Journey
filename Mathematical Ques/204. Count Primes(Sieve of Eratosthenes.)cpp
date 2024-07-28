@@ -1,0 +1,21 @@
+//Sieve of Eratosthenes
+int countPrimes(int n) {
+       if(n<=2)return 0;
+       int cnt=0;
+       //mark all number as prime.
+       vector<bool>prime(n+1,true);
+
+       //now mark 0 and 1 as non prime
+       prime[0]=false;
+       prime[1]=false;
+       //LOGIC USED: the first number which is marked true is the prime number and all the multiples of it are not prime so mark all those multiple as false.
+       
+       for(int i=2;i<n;i++){
+        if(prime[i]){
+            cnt++; //first element is prime number 
+            // now mark all multiple of prime number as false
+            for(int j=i+i;j<n;j+=i)prime[j]=false;
+        }
+       }
+       return cnt;
+    }
