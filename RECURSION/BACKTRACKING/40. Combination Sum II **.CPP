@@ -1,5 +1,7 @@
 //https://www.youtube.com/watch?v=bfKwLi6jtDk
 
+// T.C=O(2^n)
+// S.C=O(n)
 class Solution {
 public:
 vector<vector<int>>ans;
@@ -12,9 +14,9 @@ vector<vector<int>>ans;
        
        for(int i=index;i<candidates.size();i++){
             if(i>index && candidates[i]==candidates[i-1])continue;
-       temp.push_back(candidates[i]);
-       solve(candidates,i+1,target,targetSum+candidates[i],temp);
-       temp.pop_back();
+             temp.push_back(candidates[i]);
+             solve(candidates,i+1,target,targetSum+candidates[i],temp);
+             temp.pop_back();
         }   
     }
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
