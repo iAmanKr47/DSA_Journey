@@ -29,7 +29,8 @@ public:
 
 
 //CODE 2: WELL STRUCTURED ,OPTIMISED CODE
-
+//T.C: O(N)
+//S.C: O( NUMBER OF DIGITS IN N)
 class Solution {
 public:
     vector<int>ans;
