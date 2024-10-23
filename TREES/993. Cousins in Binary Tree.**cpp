@@ -1,0 +1,38 @@
+//ASKED IN JOSH TECHNOLOGIES OA ON CAMPUS
+
+class Solution {
+public:
+    queue<pair<TreeNode*,int>>q;
+    int xLevel=-1;
+    int yLevel=-1;
+    bool isPossible(TreeNode* root, int x, int y){
+        q.push({root,0});
+        while(q.size()>0){
+            auto front=q.front();
+            q.pop();
+            auto currNode=front.first;
+            auto currLvl=front.second;
+            //store the levels of x and y node
+            if(currNode->val==x)xLevel=currLvl;
+            else if(currNode->val==y)yLevel=currLvl;
+            //check for the parents 
+            auto leftNode=currNode->left;
+            auto rightNode=currNode->right;
+            if(leftNode!=NULL && rightNode!=NULL && ( (leftNode->val==x && rightNode->val==y) || (leftNode->val==y && rightNode->val==x ) ))return false;
+           //push into queue
+            if(currNode->left){
+                q.push({currNode->left,currLvl+1});
+            }
+
+            if(currNode->right){
+                q.push({currNode->right,currLvl+1});
+            }
+        }
+        if(xLevel==yLevel)return true;
+        return false;
+    }
+    bool isCousins(TreeNode* root, int x, int y) {
+        if(root==NULL || root->val==x || root->val==y)return false;
+
+        return isPossible(root,x,y);
+    }
