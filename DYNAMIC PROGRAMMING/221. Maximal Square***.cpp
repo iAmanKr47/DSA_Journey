@@ -1,3 +1,6 @@
+//after solving this ,then try que 1277. Count Square Submatrices with All Ones
+
+
 int maximalSquare(vector<vector<char>>& matrix) {
         int n = matrix.size();
          int m = matrix[0].size();
