@@ -1,3 +1,4 @@
+// HINT: Try to think about rearranged formula, (values[i] + i) + (values[j] - j) instead of values[i] + values[j] + i - j.
 
 int maxScoreSightseeingPair(vector<int>& values) {
         int n=values.size();
