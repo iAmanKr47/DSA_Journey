@@ -66,3 +66,29 @@ string answerString(string word, int numFriends) {
         // Step 6: Return the result
         return max_string;
     }
+
+
+
+//MORE CLEAN CODE OF GREEDY APPROACH
+
+ string answerString(string word, int numFriends) {
+        
+        if(numFriends==1) return word;
+        
+        char ch='a';
+        
+        for(auto x:word) ch=max(ch,x);
+        
+        string res;
+        res+=ch;
+        
+        for (int i = 0; i < word.length(); ++i) 
+        {
+            if (word[i] == ch) 
+            {
+                res = max(res, word.substr(i, word.length() - (numFriends - 1)));
+            }
+        }
+        
+        return res;
+    }
